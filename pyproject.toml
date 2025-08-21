@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bookbot"
+version = "0.1.0"
+description = "Analyze books/text files and report stats."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+bookbot = "bookbot.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["bookbot*"]
+exclude = ["books*"]
